@@ -1,0 +1,461 @@
+[
+  {
+    "id": "act-walk-park-gentle",
+    "title": "Mindful Canopy Stroll",
+    "activity_type": "walking",
+    "environment": "park",
+    "energy_level": "low",
+    "budget": "free",
+    "base_duration": "30 minutes",
+    "suitable_durations": ["15 minutes", "30 minutes", "1 hour"],
+    "accessibility": {
+      "wheelchair_accessible": true,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": true,
+      "sensory_friendly": true
+    },
+    "sample_location": "Local Public Park or Botanical Path (Demo)",
+    "description": "A tranquil, slow-paced walk beneath established tree canopies focused on sensory grounding and rhythm.",
+    "steps": [
+      "Find a paved, tree-lined perimeter or looped path in your local park.",
+      "Begin walking at half your customary pace for the first five minutes to recalibrate your senses.",
+      "Pause at intervals near shaded benches to observe the motion of foliage in the breeze.",
+      "Conclude by noticing your breathing and feeling the ground supporting your footsteps."
+    ],
+    "equipment": [
+      "Comfortable walking shoes",
+      "Weather-appropriate layers",
+      "Reusable water bottle"
+    ],
+    "nature_observation_task": "Count how many distinct variations of green you can distinguish among leaves, moss, and grass.",
+    "screen_free_recommendation": "Switch your phone to Airplane Mode or keep it tucked inside your pocket until your stroll ends.",
+    "safety_checklist": [
+      "Check local park operating hours before setting off.",
+      "Stay hydrated on warmer days.",
+      "Keep to well-maintained paths and mind uneven roots or curbs."
+    ],
+    "reflection_question": "What subtle sound or movement caught your attention once you slowed down your walking pace?"
+  },
+  {
+    "id": "act-hike-forest-moderate",
+    "title": "Woodland Ridge Explorer",
+    "activity_type": "hiking",
+    "environment": "forest",
+    "energy_level": "moderate",
+    "budget": "free",
+    "base_duration": "1 hour",
+    "suitable_durations": ["1 hour", "2 hours", "half a day"],
+    "accessibility": {
+      "wheelchair_accessible": false,
+      "seated_option": false,
+      "low_impact": false,
+      "paved_trail": false,
+      "sensory_friendly": true
+    },
+    "sample_location": "County Nature Reserve or Forest Trailhead (Demo)",
+    "description": "An energizing hike across natural terrain exploring native tree species and woodland undergrowth.",
+    "steps": [
+      "Arrive at the trailhead, review the trail map board, and note blazes or trail markers.",
+      "Maintain a steady, rhythmic stride while ascending natural dirt trails or gentle inclines.",
+      "Halt halfway through at an elevated clearing to take in the wider forest landscape.",
+      "Complete the loop with steady footing, taking in the earthy aroma of leaf litter and damp soil."
+    ],
+    "equipment": [
+      "Sturdy trail footwear or hiking boots",
+      "Water bottle (at least 750ml)",
+      "Lightweight rain jacket or windbreaker",
+      "Small backpack for essentials"
+    ],
+    "nature_observation_task": "Find three tree species with distinct bark textures (e.g., furrowed, papery, or moss-covered).",
+    "screen_free_recommendation": "Keep your phone deep in your backpack; use physical trail markers and trail signage for navigation.",
+    "safety_checklist": [
+      "Inform someone of your intended route and estimated return time.",
+      "Check recent weather reports for muddy or slippery conditions.",
+      "Stay on marked paths to avoid disturbing soil crusts and local wildlife."
+    ],
+    "reflection_question": "How did the soundscape shift between the forest edge and deeper beneath the canopy?"
+  },
+  {
+    "id": "act-bird-garden-low",
+    "title": "Backyard Songbird Vigil",
+    "activity_type": "birdwatching",
+    "environment": "garden",
+    "energy_level": "low",
+    "budget": "free",
+    "base_duration": "30 minutes",
+    "suitable_durations": ["15 minutes", "30 minutes", "1 hour"],
+    "accessibility": {
+      "wheelchair_accessible": true,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": true,
+      "sensory_friendly": true
+    },
+    "sample_location": "Home Garden, Balcony, or Community Allotment (Demo)",
+    "description": "A stationary bird observation practice requiring patience, keen ears, and quiet appreciation.",
+    "steps": [
+      "Set up a comfortable garden chair or bench in an unobtrusive, sheltered vantage point.",
+      "Sit quietly for 10 minutes without making sudden movements to allow local wildlife to settle.",
+      "Listen intently for regional calls, chirps, and rustling in shrubs or hedges.",
+      "Note flight patterns, feeding routines, and perch preferences of visiting birds."
+    ],
+    "equipment": [
+      "Compact binoculars (optional)",
+      "Notebook and pencil for sketching or noting sightings",
+      "Warm blanket or jacket if chilly"
+    ],
+    "nature_observation_task": "Identify two distinct bird vocalizations: a territorial song versus a sharp alert or contact chirp.",
+    "screen_free_recommendation": "Use a physical paper notebook rather than a bird identification app to record plumage notes.",
+    "safety_checklist": [
+      "Maintain a respectful distance from active nests or fledgling birds.",
+      "Dress warmly in layers if sitting still in early morning breezes."
+    ],
+    "reflection_question": "What tiny behaviors did you notice that you normally overlook when rushing through the garden?"
+  },
+  {
+    "id": "act-garden-soil-moderate",
+    "title": "Soil Grounding & Plant Care",
+    "activity_type": "gardening",
+    "environment": "garden",
+    "energy_level": "moderate",
+    "budget": "low-cost",
+    "base_duration": "1 hour",
+    "suitable_durations": ["30 minutes", "1 hour", "2 hours"],
+    "accessibility": {
+      "wheelchair_accessible": true,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": true,
+      "sensory_friendly": false
+    },
+    "sample_location": "Backyard Raised Beds or Community Garden Plot (Demo)",
+    "description": "Tactile interaction with soil, compost, and living green plants to ground the nervous system.",
+    "steps": [
+      "Inspect current planters, garden beds, or potted greens for moisture and fallen debris.",
+      "Gently weed around root zones and aerate compacted topsoil using hand tools.",
+      "Apply organic mulch or compost around plant bases to retain natural moisture.",
+      "Prune faded blossoms or dead leaves to encourage fresh seasonal growth."
+    ],
+    "equipment": [
+      "Gardening gloves",
+      "Hand trowel or small cultivator",
+      "Watering can",
+      "Pruning shears or clean kitchen scissors"
+    ],
+    "nature_observation_task": "Observe a scoop of damp garden soil: note its aroma, texture, and any earthworms or micro-creatures helping it breathe.",
+    "screen_free_recommendation": "Leave your phone inside the house on your kitchen counter while working the soil.",
+    "safety_checklist": [
+      "Wash hands thoroughly after handling soil and compost.",
+      "Wear gloves to protect against splinters, thorns, and sharp stones.",
+      "Lift heavy bags of soil or compost with bent knees to protect your back."
+    ],
+    "reflection_question": "How did the physical sensation of cool earth and damp leaves affect your mental stress levels?"
+  },
+  {
+    "id": "act-photo-nature-macro",
+    "title": "Macro Textures & Hidden Patterns",
+    "activity_type": "photography",
+    "environment": "park",
+    "energy_level": "low",
+    "budget": "free",
+    "base_duration": "30 minutes",
+    "suitable_durations": ["15 minutes", "30 minutes", "1 hour", "2 hours"],
+    "accessibility": {
+      "wheelchair_accessible": true,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": true,
+      "sensory_friendly": true
+    },
+    "sample_location": "Community Park or Woodland Arboretum (Demo)",
+    "description": "A focused visual safari seeking intricate organic geometry, lichen rings, leaf veins, and dew drops.",
+    "steps": [
+      "Select a dedicated camera or turn your smartphone to dedicated camera mode with notifications muted.",
+      "Choose a single square meter of natural terrain (a boulder, fallen log, or tree trunk).",
+      "Capture extreme close-ups of concentric rings, veins, fungal gills, or droplets.",
+      "Experiment with natural side-lighting and low-angle framing without disturbing the subject."
+    ],
+    "equipment": [
+      "Camera or smartphone camera in Do-Not-Disturb mode",
+      "Small magnifying lens or macro attachment (optional)",
+      "Microfiber lens cloth"
+    ],
+    "nature_observation_task": "Find a natural fractal pattern where a miniature structure mirrors a larger branch or river system.",
+    "screen_free_recommendation": "Turn off all cellular data and push notifications so your phone acts solely as an optical viewfinder.",
+    "safety_checklist": [
+      "Watch your footing when crouching or kneeling near slopes and damp rocks.",
+      "Do not pick, crush, or alter wild flora just to get a photograph.",
+      "Watch for stinging nettles or biting insects in low underbrush."
+    ],
+    "reflection_question": "What overlooked detail in nature appeared surprisingly complex when examined up close?"
+  },
+  {
+    "id": "act-cycle-countryside-high",
+    "title": "Breezy Countryside Byway Ride",
+    "activity_type": "cycling",
+    "environment": "countryside",
+    "energy_level": "high",
+    "budget": "free",
+    "base_duration": "2 hours",
+    "suitable_durations": ["1 hour", "2 hours", "half a day"],
+    "accessibility": {
+      "wheelchair_accessible": false,
+      "seated_option": false,
+      "low_impact": false,
+      "paved_trail": true,
+      "sensory_friendly": false
+    },
+    "sample_location": "Paved Rural Greenway or Farm Lane Route (Demo)",
+    "description": "An active pedal through open fields, hedgerows, and rolling meadows feeling the open wind.",
+    "steps": [
+      "Perform a quick bicycle safety check (tire pressure, brakes, chain lubrication).",
+      "Set out along a quiet rural lane, designated cycle trail, or paved canal towpath.",
+      "Sustain an aerobic pedal pace while listening to open field winds and distant livestock.",
+      "Stop at a scenic milestone or bridge to catch your breath and stretch your hamstrings."
+    ],
+    "equipment": [
+      "Bicycle in good working order",
+      "Fitted bike helmet",
+      "Filled hydration bottle",
+      "Basic multi-tool and mini-pump"
+    ],
+    "nature_observation_task": "Notice the transition in scents as you ride between hay meadows, damp riverbeds, and pine stands.",
+    "screen_free_recommendation": "Stow your phone securely in a saddlebag or backpack rather than mounting it on your handlebars.",
+    "safety_checklist": [
+      "Wear high-visibility clothing and use bike lights even on overcast afternoons.",
+      "Be alert for agricultural traffic, cattle crossings, or gravel patches.",
+      "Adhere strictly to local traffic regulations on shared rural roads."
+    ],
+    "reflection_question": "How did the sensation of moving fast through open air change your relationship with the landscape?"
+  },
+  {
+    "id": "act-stargaze-beach-low",
+    "title": "Coastal Celestial Nightwatch",
+    "activity_type": "stargazing",
+    "environment": "beach",
+    "energy_level": "low",
+    "budget": "free",
+    "base_duration": "1 hour",
+    "suitable_durations": ["30 minutes", "1 hour", "2 hours"],
+    "accessibility": {
+      "wheelchair_accessible": false,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": false,
+      "sensory_friendly": true
+    },
+    "sample_location": "Public Coastal Shoreline or Elevated Bluff Overlook (Demo)",
+    "description": "An evening contemplation of celestial constellations synchronized with the rhythm of breaking ocean tides.",
+    "steps": [
+      "Arrive at a safe coastal vantage point away from bright streetlights about 45 minutes after sunset.",
+      "Lay out a moisture-resistant ground tarp and warm wool blanket on firm dry sand.",
+      "Allow your eyes 20 minutes to adapt to dark vision without any white light exposure.",
+      "Trace major asterisms (the Plough, Cassiopeia, Orion) while tuning into the rhythm of crashing waves."
+    ],
+    "equipment": [
+      "Warm thermal layers and wind-resistant jacket",
+      "Ground blanket or reclining beach chair",
+      "Red-light flashlight (preserves night-adapted vision)",
+      "Thermos of warm herbal tea"
+    ],
+    "nature_observation_task": "Track the apparent movement of a bright constellation relative to a prominent seaside rock or headland.",
+    "screen_free_recommendation": "Never look at smartphone screens; white screen glare destroys night vision for up to 30 minutes.",
+    "safety_checklist": [
+      "Check tidal charts in advance to ensure your observation spot won't be cut off by rising water.",
+      "Stay well back from steep, unbarricaded cliff edges in the dark.",
+      "Always stargaze with a buddy or let someone know your exact coastal location."
+    ],
+    "reflection_question": "What thoughts arise when pairing the vastness of the night sky with the endless sound of the ocean?"
+  },
+  {
+    "id": "act-relax-forest-shinrin",
+    "title": "Forest Bathing (Shinrin-yoku)",
+    "activity_type": "relaxation",
+    "environment": "forest",
+    "energy_level": "low",
+    "budget": "free",
+    "base_duration": "1 hour",
+    "suitable_durations": ["30 minutes", "1 hour", "2 hours"],
+    "accessibility": {
+      "wheelchair_accessible": true,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": true,
+      "sensory_friendly": true
+    },
+    "sample_location": "Quiet Grove in Ancient Woodland or City Arboretum (Demo)",
+    "description": "Mindful immersion in the sensory atmosphere of the woods to lower cortisol and induce restorative calm.",
+    "steps": [
+      "Enter the woods with no destination or distance goal in mind.",
+      "Engage your five senses one by one: smell the phytoncides and damp soil; touch rough moss; listen to wind.",
+      "Find an inviting spot beside an old tree trunk to stand or sit peacefully for twenty uninterrupted minutes.",
+      "Notice how the forest life continues its quiet conversations all around you."
+    ],
+    "equipment": [
+      "Sit pad or compact folding stool",
+      "Comfortable warm clothing",
+      "Thermos of warm water or tea"
+    ],
+    "nature_observation_task": "Close your eyes for 5 full minutes and count every distinct layer of sound you can hear.",
+    "screen_free_recommendation": "Power down your smartphone completely before stepping onto the forest trail.",
+    "safety_checklist": [
+      "Dress in warm layers to avoid catching a chill while sitting motionless.",
+      "Ensure you stay within sight of a recognized path before finding your quiet resting place.",
+      "Respect wildlife habitats and leave no trace behind."
+    ],
+    "reflection_question": "What happens to your mental chatter when you give your full attention to the breath of the trees?"
+  },
+  {
+    "id": "act-indoor-nature-window",
+    "title": "Window & Balcony Sky Study",
+    "activity_type": "relaxation",
+    "environment": "indoor nature",
+    "energy_level": "low",
+    "budget": "free",
+    "base_duration": "15 minutes",
+    "suitable_durations": ["15 minutes", "30 minutes"],
+    "accessibility": {
+      "wheelchair_accessible": true,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": true,
+      "sensory_friendly": true
+    },
+    "sample_location": "Home Window Facing Sky, Sunroom, or Sheltered Balcony (Demo)",
+    "description": "Accessible nature immersion for days with inclement weather, low physical energy, or limited mobility.",
+    "steps": [
+      "Open a window slightly to allow fresh outdoor air, natural scents, and ambient sounds inside.",
+      "Arrange comfortable seating facing the sky, nearby tree crowns, or balcony potted plants.",
+      "Observe cloud formations, sunbeam shifts, and passing urban wildlife.",
+      "Take five slow, deep diaphragmatic breaths of natural outside air."
+    ],
+    "equipment": [
+      "Comfortable armchair or cushion",
+      "Warm beverage",
+      "Sketchpad or journal"
+    ],
+    "nature_observation_task": "Observe cloud drift for ten minutes: identify their altitude level and speed of changing form.",
+    "screen_free_recommendation": "Turn away from all computer monitors and television screens; direct your gaze solely through the open window.",
+    "safety_checklist": [
+      "Close windows if high winds, rain, or extreme drafts pose an indoor hazard.",
+      "Ensure balcony railings are secure and clear of slippery obstacles."
+    ],
+    "reflection_question": "Even from indoors, how does opening a portal to the living atmosphere shift your headspace?"
+  },
+  {
+    "id": "act-beach-walk-sand",
+    "title": "Tideline Drift & Shell Seeking",
+    "activity_type": "walking",
+    "environment": "beach",
+    "energy_level": "moderate",
+    "budget": "free",
+    "base_duration": "1 hour",
+    "suitable_durations": ["30 minutes", "1 hour", "2 hours"],
+    "accessibility": {
+      "wheelchair_accessible": false,
+      "seated_option": true,
+      "low_impact": false,
+      "paved_trail": false,
+      "sensory_friendly": true
+    },
+    "sample_location": "Sandy Seaside Coastline or Lake Shoreline (Demo)",
+    "description": "A rhythmic walk along the shoreline water line observing marine deposits, wave ripples, and sea foam.",
+    "steps": [
+      "Walk parallel to the water's edge along the firm wet sand left by receding waves.",
+      "Match your walking pace with the incoming and outgoing rhythm of the swell.",
+      "Inspect the wrack line for interesting smoothed sea glass, driftwood shapes, and empty bivalve shells.",
+      "Stop to watch sea foam bubbles form, drift, and burst in the sea spray."
+    ],
+    "equipment": [
+      "Weatherproof footwear or bare feet (if sand is warm and clean)",
+      "Sun protection (hat, sunglasses)",
+      "Windbreaker jacket"
+    ],
+    "nature_observation_task": "Find five naturally smoothed stones or shells and compare how seawater alters their colors.",
+    "screen_free_recommendation": "Keep hands free of electronics; collect sea treasures or simply let your hands swing freely.",
+    "safety_checklist": [
+      "Be conscious of incoming waves and sudden sneaker surges.",
+      "Never turn your back entirely on heavy surf.",
+      "Leave living mollusks, crabs, and anchored seaweeds untouched in their tidal homes."
+    ],
+    "reflection_question": "What burdens or stressful thoughts can you symbolically surrender to the receding tide?"
+  },
+  {
+    "id": "act-hiking-hill-high",
+    "title": "Sunrise Summit Trek",
+    "activity_type": "hiking",
+    "environment": "countryside",
+    "energy_level": "high",
+    "budget": "flexible",
+    "base_duration": "2 hours",
+    "suitable_durations": ["1 hour", "2 hours", "half a day"],
+    "accessibility": {
+      "wheelchair_accessible": false,
+      "seated_option": false,
+      "low_impact": false,
+      "paved_trail": false,
+      "sensory_friendly": false
+    },
+    "sample_location": "Regional Hilltop Trail or Foothills Ridge (Demo)",
+    "description": "A vigorous upland climb offering panoramic horizons, invigorating cardiovascular exertion, and pure fresh air.",
+    "steps": [
+      "Plan your departure so you arrive at the summit ridge as early morning or golden hour light breaks.",
+      "Pace yourself with steady breath-to-stride ratios on steep rocky ascents.",
+      "Reach the summit marker and pause for fifteen minutes to let the 360-degree horizon fill your field of vision.",
+      "Descend cautiously with relaxed knees, stepping deliberately on stable rock surfaces."
+    ],
+    "equipment": [
+      "Trekking poles (optional but helpful on descents)",
+      "Supportive hiking boots with deep tread",
+      "Hydration pack with at least 1.5L of water",
+      "Nutritious trail snack (nuts, dried fruit, or apple)"
+    ],
+    "nature_observation_task": "Trace how land use changes across the panorama below: from farm fields to wooded valleys and distant waters.",
+    "screen_free_recommendation": "Switch off notifications; only consult a physical topographic map if route guidance is needed.",
+    "safety_checklist": [
+      "Summit weather can change rapidly; bring an extra insulating layer and waterproof shell.",
+      "Check sunset times to avoid descending steep trails in darkness without headlamps.",
+      "Carry sufficient water; upland ridges rarely offer potable water sources."
+    ],
+    "reflection_question": "How did your physical effort along the climb intensify your appreciation for the summit view?"
+  },
+  {
+    "id": "act-bird-forest-moderate",
+    "title": "Canopy Bird Acoustics Expedition",
+    "activity_type": "birdwatching",
+    "environment": "forest",
+    "energy_level": "moderate",
+    "budget": "free",
+    "base_duration": "1 hour",
+    "suitable_durations": ["30 minutes", "1 hour", "2 hours"],
+    "accessibility": {
+      "wheelchair_accessible": false,
+      "seated_option": true,
+      "low_impact": true,
+      "paved_trail": false,
+      "sensory_friendly": true
+    },
+    "sample_location": "Deciduous Woodland Reserve or Forest Sanctuary (Demo)",
+    "description": "An auditory tracking walk exploring tree hollows, woodpecker drums, and songbird canopy layers.",
+    "steps": [
+      "Walk softly down a shaded forest trail, halting every 50 meters to stand silently for two minutes.",
+      "Listen in 360 degrees for woodpeckers hammering deadwood or nuthatches climbing trunks.",
+      "Look for telltale leaf twitches high above to pinpoint bird locations.",
+      "Observe how different bird species occupy specific layers: ground foragers, mid-shrub, and crown canopy."
+    ],
+    "equipment": [
+      "Binoculars (8x42 recommended)",
+      "Dark or earth-toned clothing that blends into the forest",
+      "Field notebook and pencil"
+    ],
+    "nature_observation_task": "Locate an insect-eating bird and watch its hunting technique for 3 full minutes without moving.",
+    "screen_free_recommendation": "Ditch audio apps; let your own ears become the sensitive parabolic microphones.",
+    "safety_checklist": [
+      "Be alert for hanging branches (widowmakers) after strong winds.",
+      "Apply insect repellent for ticks and mosquitoes in wooded areas.",
+      "Stick to established paths to protect delicate forest floor fungal networks."
+    ],
+    "reflection_question": "What did you learn about the layered architecture of the forest by following birds from ground to canopy?"
+  }
+]

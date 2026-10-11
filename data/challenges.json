@@ -1,0 +1,172 @@
+[
+  {
+    "id": "chal-01-sounds",
+    "title": "Natural Soundscape Symphony",
+    "category": "Mindfulness",
+    "difficulty": "Easy",
+    "estimated_minutes": 15,
+    "summary": "Spend 15 minutes noticing subtle natural sounds without speaking or checking a screen.",
+    "instructions": [
+      "Find an outdoor bench, rock, or tree stump away from high-speed vehicular traffic.",
+      "Close your eyes or cast a soft gaze downward toward the ground.",
+      "For the first 5 minutes, notice sounds close to you: your breath, wind against your jacket, rustling grass.",
+      "For the next 5 minutes, expand your hearing outward: bird calls, fluttering wings, swaying branches.",
+      "For the final 5 minutes, identify the furthest natural sound you can detect on the horizon."
+    ],
+    "reflection_prompt": "Which sounds were rhythmic and predictable, and which occurred spontaneously?",
+    "offline_tip": "Keep your phone inside your pocket on silent or leave it in your backpack."
+  },
+  {
+    "id": "chal-02-leaves",
+    "title": "Five Leaf Shapes Scavenger",
+    "category": "Biodiversity",
+    "difficulty": "Easy",
+    "estimated_minutes": 20,
+    "summary": "Identify and compare five distinct leaf shapes in your immediate neighborhood or park.",
+    "instructions": [
+      "Walk through a garden, park, or tree-lined street.",
+      "Find 5 distinct leaf silhouettes (e.g., palmate/hand-shaped, ovate/egg-shaped, needle-like, serrated/toothed, linear/grass-like).",
+      "Inspect fallen leaves on the ground rather than tearing live leaves off living branches.",
+      "Gently examine the underside of each leaf to see how its vein network delivers nutrients.",
+      "Arrange the fallen leaves in a geometric circle on a rock or soil patch as temporary nature art."
+    ],
+    "reflection_prompt": "What structural advantages might each leaf shape provide in shedding rain or catching sunlight?",
+    "offline_tip": "Use a pocket sketchbook to trace the leaf outlines rather than snapping photos."
+  },
+  {
+    "id": "chal-03-birds",
+    "title": "Silent Sentinel: Quiet Bird Observation",
+    "category": "Biodiversity",
+    "difficulty": "Moderate",
+    "estimated_minutes": 25,
+    "summary": "Observe wild birds without startling them or invading their natural habitat perimeter.",
+    "instructions": [
+      "Locate a hedgerow, tree canopy edge, or feeder area where birds naturally congregate.",
+      "Stand or sit completely still against a wall or tree trunk for at least ten minutes.",
+      "Notice how the birds gradually accept your calm presence and resume their normal feeding or grooming.",
+      "Watch how one bird communicates warnings or food alerts to other members of the flock.",
+      "Retreat just as quietly when you are finished without causing any sudden fluttering panic."
+    ],
+    "reflection_prompt": "What changed in your body language to make the birds comfortable around you?",
+    "offline_tip": "Focus entirely on real-time sight and sound; avoid checking identification apps."
+  },
+  {
+    "id": "chal-04-phonefree-walk",
+    "title": "Untethered Stroll: The Screen-Free Mile",
+    "category": "Mindfulness",
+    "difficulty": "Easy",
+    "estimated_minutes": 30,
+    "summary": "Walk outdoors for a full half-hour without checking, touching, or glancing at your phone.",
+    "instructions": [
+      "Before leaving your front door, tell a family member or friend you are stepping out for a 30-minute walk.",
+      "Turn your phone off completely or place it in a zippered pocket where your hands won't mindlessly reach for it.",
+      "Walk at an easy, unhurried pace through your neighborhood, park, or trail.",
+      "Notice the physical urge to 'check' or 'capture' things, and let that reflex gently pass.",
+      "Look up at second-story architecture, treetop birds, and passing clouds that screen-gazers miss."
+    ],
+    "reflection_prompt": "How many times during the walk did you notice phantom notifications or the impulse to scroll?",
+    "offline_tip": "Wear a standard analog wristwatch if you need to keep track of the time."
+  },
+  {
+    "id": "chal-05-textures",
+    "title": "Tactile Nature: Five Natural Textures",
+    "category": "Creative & Art",
+    "difficulty": "Easy",
+    "estimated_minutes": 20,
+    "summary": "Touch, photograph, or sketch five distinctly different natural textures in the wild.",
+    "instructions": [
+      "Explore a park, forest path, or shoreline.",
+      "Locate 5 distinct textures: e.g., velvety moss, grooved oak bark, glassy river pebble, brittle pinecone, and smooth shoreline shell.",
+      "Use your fingertips with your eyes closed first to isolate the tactile sensation before looking.",
+      "Note the temperature differences between sun-warmed stone and damp soil under shaded trees.",
+      "Create a mental or paper rubbing of the most intricate pattern you encountered."
+    ],
+    "reflection_prompt": "Which texture felt most soothing or surprising to your fingertips?",
+    "offline_tip": "Bring a piece of paper and a soft graphite pencil for classic texture rubbings."
+  },
+  {
+    "id": "chal-06-plantcare",
+    "title": "Flora Guardian: 20 Minutes of Plant Care",
+    "category": "Micro-Adventure",
+    "difficulty": "Easy",
+    "estimated_minutes": 20,
+    "summary": "Spend 20 focused minutes caring for living plants—outdoors in a garden, balcony, or house pots.",
+    "instructions": [
+      "Gather watering tools, a pair of gardening shears or scissors, and a damp cloth.",
+      "Check the moisture depth of the soil with your fingers (soil should feel like a wrung-out sponge).",
+      "Prune away yellowing stems, dried seed heads, and dead leaves so the plant channels energy to new buds.",
+      "Gently wipe accumulated dust from indoor broad leaves or aerate outdoor mulch around the root line.",
+      "Give each plant a slow, mindful soak near the root base rather than spraying leaves."
+    ],
+    "reflection_prompt": "What signs of vitality or recent growth did you discover while grooming the plants?",
+    "offline_tip": "Treat this as quiet meditation rather than a hurried chore."
+  },
+  {
+    "id": "chal-07-cloud-watch",
+    "title": "Cloud Cartography: Sky Drift Study",
+    "category": "Mindfulness",
+    "difficulty": "Easy",
+    "estimated_minutes": 15,
+    "summary": "Lie on a blanket or grass patch and observe atmospheric cloud currents for 15 minutes.",
+    "instructions": [
+      "Spread a picnic blanket or sit on a park hill with an unobstructed view of the open sky.",
+      "Lie back comfortably with relaxed shoulders.",
+      "Watch a single cloud cluster from its formation, drifting metamorphosis, through to dissipation.",
+      "Notice the different speeds of upper-level cirrus versus lower cumulus cloud layers.",
+      "Take deep, slow breaths aligned with the slow expanse of the open sky."
+    ],
+    "reflection_prompt": "How did resting beneath the vastness of the sky shift your sense of daily priorities?",
+    "offline_tip": "Let your thoughts pass through your consciousness exactly like clouds across the sky."
+  },
+  {
+    "id": "chal-08-micro-cleanup",
+    "title": "Trail Steward: Five-Piece Micro Cleanup",
+    "category": "Micro-Adventure",
+    "difficulty": "Easy",
+    "estimated_minutes": 15,
+    "summary": "Safely collect and dispose of at least five pieces of human litter along a nature path.",
+    "instructions": [
+      "Carry a small bag and disposable or washable gloves on your regular outdoor walk.",
+      "Spot pieces of plastic, bottle caps, or wrapper debris caught in shrubs or trail margins.",
+      "Safely pick them up without reaching into blind thorn thickets or touching hazardous items.",
+      "Deposit collected litter in the nearest municipal recycling or waste bin.",
+      "Take satisfaction in leaving the ecosystem slightly healthier than you found it."
+    ],
+    "reflection_prompt": "How did taking active responsibility for a wild trail make you feel about your role in nature?",
+    "offline_tip": "A simple pair of reusable tongs makes litter retrieval hygienic and effortless."
+  },
+  {
+    "id": "chal-09-barefoot-ground",
+    "title": "Barefoot Grounding: Soil Connection",
+    "category": "Physical & Active",
+    "difficulty": "Moderate",
+    "estimated_minutes": 15,
+    "summary": "Safely remove your shoes on clean grass or warm sand to ground your nervous system.",
+    "instructions": [
+      "Find a clean, safe patch of soft lawn, mossy meadow, or clean sandy beach free of broken glass or sharp stones.",
+      "Take off your shoes and socks and stand upright with feet hip-width apart.",
+      "Feel the cool moisture, individual blades of grass, or warm mineral grains under your arches.",
+      "Take ten slow, deliberate steps, noticing how your balance adjusts without rubber shoe soles.",
+      "Rest motionless for 5 minutes, feeling anchored to the Earth."
+    ],
+    "reflection_prompt": "What physical sensations emerged in your calves and feet during direct contact with the ground?",
+    "offline_tip": "Keep a clean small towel nearby to dry your feet before slipping shoes back on."
+  },
+  {
+    "id": "chal-10-dusk-chorus",
+    "title": "Twilight Vigil: The Dusk Transition",
+    "category": "Mindfulness",
+    "difficulty": "Moderate",
+    "estimated_minutes": 30,
+    "summary": "Witness the dramatic sensory transition from daytime activity to nocturnal stillness at sunset.",
+    "instructions": [
+      "Arrive at an outdoor vantage point 15 minutes before scheduled sunset.",
+      "Watch the color temperature of the landscape shift from warm amber to violet and slate grey.",
+      "Listen as daytime birds quiet down and evening crickets, frogs, or owls begin their shift.",
+      "Feel the ambient temperature drop as the earth radiates daytime heat into the upper atmosphere.",
+      "Remain completely stationary for ten minutes after the sun drops below the horizon line."
+    ],
+    "reflection_prompt": "What was the exact moment when the daytime environment turned perceptibly nocturnal?",
+    "offline_tip": "Bring a warm fleece jacket so you don't cut your vigil short when the evening chill arrives."
+  }
+]

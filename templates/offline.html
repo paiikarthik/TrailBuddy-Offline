@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline Mode — TrailBuddy</title>
+  <link rel="icon" type="image/svg+xml" href="/static/icons/icon.svg">
+  <link rel="stylesheet" href="/static/css/styles.css">
+  <style>
+    .offline-page-container {
+      max-width: 640px;
+      margin: 60px auto;
+      text-align: center;
+      padding: 30px;
+      background-color: var(--color-cream-card);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-md);
+    }
+    .offline-icon {
+      font-size: 4rem;
+      margin-bottom: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="offline-page-container">
+    <div class="offline-icon">🌲</div>
+    <span class="status-pill offline" style="margin-bottom: 16px;">Offline Mode Active</span>
+    <h1 style="font-family: var(--font-serif); color: var(--color-forest-dark); font-size: 2rem; margin-bottom: 12px;">
+      You're in the wild without cell service!
+    </h1>
+    <p style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.6; margin-bottom: 24px;">
+      TrailBuddy Offline was built specifically for this. Even with no internet connection, your cached application shell,
+      offline rule-based planner, and private nature journal are right here on your device.
+    </p>
+
+    <div class="highlight-box" style="text-align: left; margin-bottom: 24px;">
+      <strong>🌿 Available Offline Features:</strong>
+      <ul style="margin: 8px 0 0 20px; font-size: 0.9rem; line-height: 1.6;">
+        <li>Generate outdoor plans using the in-browser rule engine</li>
+        <li>Browse bundled Touch Grass challenges</li>
+        <li>Record and review observations in your private Nature Journal</li>
+        <li>Track screen-free outdoor session time</li>
+      </ul>
+    </div>
+
+    <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+      <a href="/" class="btn btn-lg btn-primary">Open TrailBuddy App Shell</a>
+      <button onclick="window.history.back()" class="btn btn-lg btn-outline">Go Back</button>
+    </div>
+  </div>
+</body>
+</html>

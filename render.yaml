@@ -1,0 +1,38 @@
+services:
+  - type: web
+    name: trailbuddy-offline
+    env: python
+    runtime: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --threads 4 --timeout 60
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: FLASK_ENV
+        value: production
+      # AI configuration:
+      # On Render's free tier, memory limits (512MB RAM) prevent running local LLMs in-container.
+      # By default, AI_PROVIDER is set to 'disabled' so the application serves immediate,
+      # 100% reliable plans via its built-in rule-based offline engine.
+      # To connect a hosted open-weight model (e.g., HuggingFace, vLLM, or self-hosted Ollama):
+      # Change AI_PROVIDER to 'hosted' and set HOSTED_AI_ENDPOINT below.
+      - key: AI_PROVIDER
+        value: disabled
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+      - key: OLLAMA_MODEL
+        value: mistral
+      - key: HOSTED_AI_ENDPOINT
+        value: ""
+      - key: HOSTED_AI_MODEL
+        value: mistralai/Mistral-7B-Instruct-v0.3
+      - key: HOSTED_AI_KEY
+        sync: false
+      - key: AI_TIMEOUT_SECONDS
+        value: "8.0"
+      - key: RATE_LIMIT_PER_MINUTE
+        value: "60 per minute"

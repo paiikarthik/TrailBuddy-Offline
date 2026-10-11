@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b4332" />
+      <stop offset="100%" stop-color="#081c15" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f4a261" />
+      <stop offset="100%" stop-color="#e76f51" />
+    </linearGradient>
+    <linearGradient id="mountainBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#52b788" />
+      <stop offset="100%" stop-color="#2d6a4f" />
+    </linearGradient>
+    <linearGradient id="mountainFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#40916c" />
+      <stop offset="100%" stop-color="#1b4332" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Rounded Shield -->
+  <rect width="512" height="512" rx="110" fill="url(#bgGrad)" />
+
+  <!-- Outer Compass Ring -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#74c69d" stroke-width="6" stroke-dasharray="12 16" opacity="0.4" />
+  <circle cx="256" cy="256" r="195" fill="none" stroke="#dda15e" stroke-width="3" opacity="0.6" />
+
+  <!-- Rising Sun -->
+  <circle cx="256" cy="210" r="75" fill="url(#sunGrad)" opacity="0.9" />
+
+  <!-- Distant Mountain Peaks -->
+  <polygon points="120,380 230,220 340,380" fill="url(#mountainBack)" opacity="0.8" />
+  <polygon points="210,380 320,200 430,380" fill="url(#mountainBack)" opacity="0.85" />
+
+  <!-- Foreground Mountain -->
+  <polygon points="60,390 190,260 320,390" fill="url(#mountainFront)" />
+  <polygon points="250,390 370,240 480,390" fill="url(#mountainFront)" />
+
+  <!-- Evergreen Pine Trees -->
+  <!-- Tree 1 -->
+  <polygon points="190,390 160,340 180,340 165,300 190,300 175,260 190,260 190,390" fill="#74c69d" />
+  <polygon points="190,390 220,340 200,340 215,300 190,300 205,260 190,260 190,390" fill="#52b788" />
+  <!-- Tree 2 Center Left -->
+  <polygon points="256,390 220,330 245,330 230,280 256,280 256,390" fill="#95d5b2" />
+  <polygon points="256,390 292,330 267,330 282,280 256,280 256,390" fill="#74c69d" />
+
+  <!-- Winding Trail Line -->
+  <path d="M 120 440 Q 220 400 256 360 T 360 300" fill="none" stroke="#f4a261" stroke-width="10" stroke-linecap="round" />
+
+  <!-- Star / Compass Accent -->
+  <polygon points="256,80 262,96 278,96 265,106 270,122 256,112 242,122 247,106 234,96 250,96" fill="#e9c46a" />
+</svg>

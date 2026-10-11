@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrailBuddy Offline — AI-Powered Outdoor Companion</title>
+  <meta name="description" content="Less scrolling. More exploring. An open-source, privacy-first outdoor activity planner and nature journal for Hacktoberfest 2026 Touch Grass.">
+  <meta name="theme-color" content="#1b4332">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="/static/icons/icon.svg">
+  <link rel="apple-touch-icon" href="/static/icons/icon-192.png">
+  <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="#dashboard" class="logo-group" data-tab-target="dashboard">
+        <img src="/static/icons/icon.svg" alt="TrailBuddy Logo" class="logo-icon" width="36" height="36">
+        <div>
+          <div class="logo-text">TrailBuddy <span style="font-weight: 300; font-size: 0.85em; opacity: 0.9;">Offline</span></div>
+          <div class="logo-tagline">Touch Grass • Open Source</div>
+        </div>
+      </a>
+
+      <div class="header-right">
+        <div id="network-status-pill" class="status-pill online" title="Network status">
+          <span id="network-status-text">Online</span>
+        </div>
+        <button id="btn-pwa-install" class="btn btn-sm btn-outline" style="display: none; color: #ffffff; border-color: rgba(255,255,255,0.4);">
+          📲 Install App
+        </button>
+      </div>
+    </div>
+
+    <!-- Navigation Tabs -->
+    <nav class="main-nav" aria-label="Main Navigation">
+      <div class="nav-container">
+        <button class="nav-link active" data-tab-target="dashboard">🏠 Dashboard</button>
+        <button class="nav-link" data-tab-target="planner">🧭 AI Planner</button>
+        <button class="nav-link" data-tab-target="journal">📖 Nature Journal</button>
+        <button class="nav-link" data-tab-target="challenges">🎯 Challenges</button>
+        <button class="nav-link" data-tab-target="discover">🗺️ Local Discovery</button>
+        <button class="nav-link" data-tab-target="about">ℹ️ About &amp; AI</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main Content Areas -->
+  <main>
+
+    <!-- =====================================================================
+         Section 1: Dashboard
+         ===================================================================== -->
+    <section id="section-dashboard" class="tab-section active">
+      <div class="hero-banner">
+        <span class="challenge-badge">Hacktoberfest 2026 • Week 1: Touch Grass</span>
+        <h1 class="hero-title">Less scrolling. More exploring.</h1>
+        <p class="hero-subtitle">
+          Disconnect from algorithmic feeds and reconnect with the living world. TrailBuddy creates personalized,
+          mindful outdoor itineraries powered by open-source AI and works 100% offline once loaded.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn-lg btn-secondary" data-tab-target="planner">🧭 Plan My Adventure</button>
+          <button class="btn btn-lg btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.6);" data-tab-target="challenges">🎯 View Daily Challenge</button>
+        </div>
+      </div>
+
+      <!-- Quick Metrics Summary -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">⏱️</div>
+          <div>
+            <div id="stats-screenfree-mins" class="stat-value">0</div>
+            <div class="stat-label">Screen-Free Minutes</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🌱</div>
+          <div>
+            <div id="stats-challenges-done" class="stat-value">0</div>
+            <div class="stat-label">Challenges Completed</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📝</div>
+          <div>
+            <div id="stats-journal-count" class="stat-value">0</div>
+            <div class="stat-label">Nature Observations</div>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🔥</div>
+          <div>
+            <div id="stats-streak-days" class="stat-value">0</div>
+            <div class="stat-label">Outdoor Streak (Days)</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Interactive Dashboard -->
+      <div class="dashboard-grid">
+        <!-- Screen-Free Outdoor Timer Widget -->
+        <div class="widget-card">
+          <h2 class="widget-title">⏳ Screen-Free Outdoor Tracker</h2>
+          <p class="widget-subtitle">Put your phone in your pocket or backpack and track real-world minutes spent outside.</p>
+          <div class="timer-container">
+            <div id="timer-display" class="timer-digits">00:00</div>
+            <div class="timer-controls">
+              <button id="timer-btn-toggle" class="btn btn-primary">🌱 Start Outdoor Session</button>
+              <button id="timer-btn-log" class="btn btn-secondary" disabled>💾 Log Minutes</button>
+              <button id="timer-btn-reset" class="btn btn-outline">Reset</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily Challenge Spotlight -->
+        <div class="widget-card">
+          <h2 class="widget-title">🎯 Daily Outdoor Mission</h2>
+          <p class="widget-subtitle">A bite-sized prompt to stimulate curiosity, sensory observation, and mindfulness.</p>
+          <div id="daily-challenge-container" class="daily-challenge-box">
+            <!-- Dynamically populated by app.js -->
+            <p>Loading today's challenge...</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Offline Readiness & AI Status Card -->
+      <div class="widget-card" style="background-color: var(--color-sand); border-color: var(--color-earth-light);">
+        <h3 class="widget-title" style="font-size: 1.1rem;">
+          🛡️ Privacy &amp; Offline Guarantee
+        </h3>
+        <p style="font-size: 0.9rem; color: var(--color-text-main); margin-top: 6px;">
+          <strong>No account required:</strong> You never have to register, log in, or share personal data.
+          All nature journal notes and challenge progress remain <strong>strictly inside your browser</strong>.
+          If your device loses cellular signal or enters airplane mode, TrailBuddy automatically switches to its
+          in-browser rule-based engine.
+        </p>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Section 2: AI Outdoor Planner
+         ===================================================================== -->
+    <section id="section-planner" class="tab-section">
+      <div class="form-card">
+        <h2 style="font-family: var(--font-serif); color: var(--color-forest); font-size: 1.8rem; margin-bottom: 6px;">
+          🧭 Personalized Outdoor Planner
+        </h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 24px;">
+          Tell TrailBuddy your parameters, and we will generate a sensory-rich, screen-free outdoor activity
+          plan customized to your schedule, location, and energy.
+        </p>
+
+        <!-- Quick Duration Presets -->
+        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center;">
+          <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-text-muted);">Quick Presets:</span>
+          <button type="button" class="btn btn-sm btn-outline" data-preset-time="15 minutes">⏱️ 15m Micro Unplug</button>
+          <button type="button" class="btn btn-sm btn-outline" data-preset-time="30 minutes">🌿 30m Refresh</button>
+          <button type="button" class="btn btn-sm btn-outline" data-preset-time="1 hour">🌲 1h Nature Deep-Dive</button>
+          <button type="button" class="btn btn-sm btn-outline" data-preset-time="half a day">🎒 Half-Day Expedition</button>
+        </div>
+
+        <form id="planner-form">
+          <div class="form-grid">
+            <!-- Available Time -->
+            <div class="form-group">
+              <label class="form-label" for="plan-time">Available Time</label>
+              <select id="plan-time" class="form-control" required>
+                <option value="15 minutes">15 minutes (Quick micro-break)</option>
+                <option value="30 minutes" selected>30 minutes (Standard walk/reset)</option>
+                <option value="1 hour">1 hour (Immersive outing)</option>
+                <option value="2 hours">2 hours (Extended adventure)</option>
+                <option value="half a day">Half a day (Weekend expedition)</option>
+              </select>
+            </div>
+
+            <!-- Activity Preferences -->
+            <div class="form-group">
+              <label class="form-label" for="plan-activity">Activity Preference</label>
+              <select id="plan-activity" class="form-control" required>
+                <option value="walking" selected>Walking / Gentle Strolling</option>
+                <option value="hiking">Hiking / Trail Trekking</option>
+                <option value="birdwatching">Birdwatching &amp; Wildlife Vigil</option>
+                <option value="gardening">Gardening &amp; Plant Nurturing</option>
+                <option value="photography">Nature Photography &amp; Textures</option>
+                <option value="cycling">Cycling / Byway Ride</option>
+                <option value="stargazing">Stargazing / Twilight Watching</option>
+                <option value="relaxation">Mindful Relaxation / Shinrin-yoku</option>
+              </select>
+            </div>
+
+            <!-- Energy Level -->
+            <div class="form-group">
+              <label class="form-label" for="plan-energy">Energy Level</label>
+              <select id="plan-energy" class="form-control" required>
+                <option value="low">Low (Gentle, quiet, restorative)</option>
+                <option value="moderate" selected>Moderate (Steady, active pace)</option>
+                <option value="high">High (Energetic, vigorous workout)</option>
+              </select>
+            </div>
+
+            <!-- Budget -->
+            <div class="form-group">
+              <label class="form-label" for="plan-budget">Budget</label>
+              <select id="plan-budget" class="form-control" required>
+                <option value="free" selected>Free ($0 — Use items on hand)</option>
+                <option value="low-cost">Low-cost (Under $10)</option>
+                <option value="flexible">Flexible (Gear / entrance tickets)</option>
+              </select>
+            </div>
+
+            <!-- Environment Preference -->
+            <div class="form-group">
+              <label class="form-label" for="plan-environment">Environment Preference</label>
+              <select id="plan-environment" class="form-control" required>
+                <option value="park" selected>Public Park / Green Space</option>
+                <option value="forest">Forest / Woodland Grove</option>
+                <option value="garden">Home Garden / Community Allotment</option>
+                <option value="beach">Beach / Coast / Shoreline</option>
+                <option value="countryside">Countryside / Meadow Fields</option>
+                <option value="indoor nature">Indoor Nature / Balcony Portal</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Optional Accessibility & Mobility Considerations -->
+          <div class="accessibility-box">
+            <span class="form-label">Accessibility &amp; Mobility Considerations (Optional)</span>
+            <div class="checkbox-grid">
+              <label class="checkbox-label">
+                <input type="checkbox" id="acc-wheelchair"> Wheelchair / Step-Free Access
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="acc-paved"> Paved &amp; Smooth Pathways
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="acc-seated"> Seated Resting Options
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="acc-low-impact"> Low Impact / Gentle Terrain
+              </label>
+              <label class="checkbox-label">
+                <input type="checkbox" id="acc-sensory"> Sensory-Friendly / Low Crowd
+              </label>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+            <button type="submit" id="btn-generate-plan" class="btn btn-lg btn-primary">
+              ✨ Generate My Outdoor Plan
+            </button>
+            <span style="font-size: 0.82rem; color: var(--color-text-muted);">
+              Uses local Ollama or hosted open-weight model if available, otherwise runs offline rule-based synthesis.
+            </span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Loading State Indicator -->
+      <div id="planner-loading" class="loading-box">
+        <div class="loading-spinner"></div>
+        <h3 style="color: var(--color-forest);">Consulting the wilderness guide...</h3>
+        <p style="color: var(--color-text-muted); font-size: 0.9rem;">
+          Synthesizing mindfulness prompts, equipment checklist, and sensory tasks...
+        </p>
+      </div>
+
+      <!-- Generated Plan Result Card -->
+      <div id="planner-result-card" class="result-card">
+        <div class="result-header">
+          <div>
+            <h2 id="plan-result-title" class="result-title">Outdoor Adventure</h2>
+            <div class="result-meta-row">
+              <span id="plan-result-duration">⏱️ 30 minutes</span>
+              <span id="plan-result-budget">💰 Free ($0)</span>
+            </div>
+          </div>
+          <div>
+            <span id="plan-source-badge" class="source-badge source-ai">✨ AI-Generated</span>
+          </div>
+        </div>
+
+        <div id="plan-fallback-note" class="fallback-alert" style="display: none;"></div>
+
+        <!-- Step-by-Step Instructions -->
+        <h3 class="plan-section-title">📋 Step-by-Step Instructions</h3>
+        <ul id="plan-steps-list" class="step-checklist"></ul>
+
+        <!-- Required Equipment -->
+        <h3 class="plan-section-title">🎒 Required Equipment (Simple &amp; Household)</h3>
+        <div id="plan-equip-list" style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px;"></div>
+
+        <!-- Nature Observation Task -->
+        <div class="highlight-box">
+          <strong style="color: var(--color-forest-dark);">👁️ Nature Observation Task:</strong>
+          <p id="plan-obs-task" style="margin-top: 4px;"></p>
+        </div>
+
+        <!-- Screen-Free Recommendation -->
+        <div class="highlight-box" style="background-color: var(--color-earth-pale); border-color: var(--color-earth);">
+          <strong style="color: var(--color-earth-dark);">📵 Screen-Free Tip:</strong>
+          <p id="plan-screen-tip" style="margin-top: 4px;"></p>
+        </div>
+
+        <!-- Safety Checklist -->
+        <h3 class="plan-section-title">🛡️ Safety Checklist</h3>
+        <ul id="plan-safety-list" style="margin-left: 20px; line-height: 1.6;"></ul>
+
+        <!-- Reflection Question -->
+        <h3 class="plan-section-title">🤔 Reflection Prompt</h3>
+        <p id="plan-reflect-q" style="font-style: italic; color: var(--color-forest-medium); margin-bottom: 16px;"></p>
+
+        <!-- Actions -->
+        <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px;">
+          <button id="btn-plan-journal-shortcut" class="btn btn-secondary">
+            📝 Record Reflection in Journal
+          </button>
+          <button id="btn-plan-copy" class="btn btn-outline">
+            📋 Copy Plan to Clipboard
+          </button>
+        </div>
+
+        <div class="disclaimer-box">
+          <strong>⚠️ Independent Verification Required:</strong>
+          Weather conditions, trail accessibility, wildlife activity, and park opening hours change regularly.
+          TrailBuddy does not fabricate real-time trail closures or GPS coordinates. Always independently check
+          local safety conditions and follow Leave No Trace principles.
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Section 3: Nature Journal
+         ===================================================================== -->
+    <section id="section-journal" class="tab-section">
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-family: var(--font-serif); color: var(--color-forest); font-size: 1.8rem; margin-bottom: 6px;">
+          📖 Private Nature Journal
+        </h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+          Capture sensory observations, wildlife encounters, and personal thoughts.
+          <strong>100% private:</strong> stored strictly in your browser's local storage and never transmitted to any server.
+        </p>
+      </div>
+
+      <div class="journal-layout">
+        <!-- Left: Form to record or edit entries -->
+        <div id="journal-form-card" class="widget-card" style="height: fit-content;">
+          <h3 style="font-family: var(--font-serif); font-size: 1.2rem; color: var(--color-forest); margin-bottom: 16px;">
+            ✍️ Record Observation
+          </h3>
+          <form id="journal-form">
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label class="form-label" for="journal-title">Observation Title</label>
+              <input type="text" id="journal-title" class="form-control" placeholder="e.g. Autumn leaves by the creek" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label class="form-label" for="journal-date">Date</label>
+              <input type="date" id="journal-date" class="form-control" required>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label class="form-label" for="journal-location">Location Label (Optional)</label>
+              <input type="text" id="journal-location" class="form-control" placeholder="e.g. City Arboretum, North Ridge">
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label class="form-label" for="journal-environment">Environment</label>
+              <select id="journal-environment" class="form-control">
+                <option value="park">Public Park</option>
+                <option value="forest">Forest / Woods</option>
+                <option value="garden">Garden / Balcony</option>
+                <option value="beach">Beach / Coast</option>
+                <option value="countryside">Countryside / Meadow</option>
+                <option value="indoor nature">Indoor Nature</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label class="form-label" for="journal-mood">Nature Mood</label>
+              <select id="journal-mood" class="form-control">
+                <option value="peaceful">Peaceful &amp; Calm</option>
+                <option value="invigorated">Invigorated &amp; Energetic</option>
+                <option value="breezy">Windy &amp; Brisk</option>
+                <option value="sun-soaked">Sun-soaked &amp; Warm</option>
+                <option value="rainy">Rainy &amp; Grounded</option>
+                <option value="twilight">Dusk / Twilight Stillness</option>
+              </select>
+            </div>
+
+            <div class="form-group" style="margin-bottom: 16px;">
+              <label class="form-label" for="journal-notes">Observation Notes &amp; Reflection</label>
+              <textarea id="journal-notes" class="form-control" placeholder="What did you touch, hear, smell, or notice? What thoughts emerged when you unplugged?" required></textarea>
+            </div>
+
+            <div style="display: flex; gap: 8px;">
+              <button type="submit" id="journal-submit-btn" class="btn btn-primary" style="flex: 1;">Save Observation</button>
+              <button type="button" id="btn-cancel-edit" class="btn btn-outline" style="display: none;">Cancel</button>
+            </div>
+          </form>
+
+          <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--color-border);">
+            <div style="font-size: 0.82rem; font-weight: 600; color: var(--color-text-muted); margin-bottom: 8px;">
+              💾 Backup &amp; Portability
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <button id="btn-export-journal" class="btn btn-sm btn-outline">📥 Export JSON Backup</button>
+              <label class="btn btn-sm btn-outline" style="margin-bottom: 0; cursor: pointer;">
+                📤 Restore Backup
+                <input type="file" id="import-file-input" accept=".json" style="display: none;">
+              </label>
+            </div>
+            <p style="font-size: 0.74rem; color: var(--color-text-muted); margin-top: 8px;">
+              Clearing browser cache or cookies will remove local entries unless you download a backup.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right: Filter, Search, and Journal Entries List -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; gap: 12px; flex-wrap: wrap;">
+            <div style="display: flex; gap: 8px; flex: 1; min-width: 260px;">
+              <input type="text" id="journal-search" class="form-control" placeholder="🔍 Search entries..." style="flex: 1;">
+              <select id="journal-filter-env" class="form-control" style="width: auto;">
+                <option value="all">All Environments</option>
+                <option value="park">Park</option>
+                <option value="forest">Forest</option>
+                <option value="garden">Garden</option>
+                <option value="beach">Beach</option>
+                <option value="countryside">Countryside</option>
+                <option value="indoor nature">Indoor</option>
+              </select>
+            </div>
+            <span id="journal-count-badge" class="badge badge-sage">0 entries</span>
+          </div>
+
+          <div id="journal-list">
+            <!-- Dynamically populated by journal.js -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Section 4: Touch Grass Outdoor Challenges
+         ===================================================================== -->
+    <section id="section-challenges" class="tab-section">
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-family: var(--font-serif); color: var(--color-forest); font-size: 1.8rem; margin-bottom: 6px;">
+          🎯 Touch Grass Challenges
+        </h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+          A curated curriculum of real-world outdoor exercises designed to break habitual screen loops,
+          awaken physical senses, and deepen ecological appreciation.
+        </p>
+      </div>
+
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+        <span style="font-size: 0.88rem; font-weight: 600; color: var(--color-text-main);">Filter Category:</span>
+        <select id="challenge-category-filter" class="form-control" style="width: auto;">
+          <option value="all">All Categories</option>
+          <option value="Mindfulness">Mindfulness</option>
+          <option value="Biodiversity">Biodiversity</option>
+          <option value="Physical & Active">Physical &amp; Active</option>
+          <option value="Creative & Art">Creative &amp; Art</option>
+          <option value="Micro-Adventure">Micro-Adventure</option>
+        </select>
+      </div>
+
+      <div id="challenges-grid" class="challenges-grid">
+        <!-- Dynamically populated by app.js -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Section 5: Local Discovery & Custom Spots
+         ===================================================================== -->
+    <section id="section-discover" class="tab-section">
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-family: var(--font-serif); color: var(--color-forest); font-size: 1.8rem; margin-bottom: 6px;">
+          🗺️ Local Discovery Ideas &amp; Demonstration Spots
+        </h2>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem;">
+          Explore sample outdoor ideas across various habitats.
+        </p>
+      </div>
+
+      <div class="highlight-box" style="background-color: var(--color-sand); border-color: var(--color-earth-light); margin-bottom: 20px;">
+        <strong>📍 Demonstration Dataset Notice:</strong>
+        To protect your privacy and ensure 100% offline reliability without paid APIs, TrailBuddy provides
+        inspirational demonstration spots. We do not invent fictitious coordinates or scrape closed properties.
+        Use these ideas in your local parks, forests, and green spaces, or save your own secret spots below!
+      </div>
+
+      <!-- User Custom Spots Section -->
+      <div class="widget-card" style="margin-bottom: 24px;">
+        <h3 class="widget-title">📌 My Favorite Local Nature Spots</h3>
+        <p class="widget-subtitle">Save your own favorite nearby park benches, quiet woodlands, or scenic bluffs locally in your browser.</p>
+
+        <form id="custom-spot-form" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px;">
+          <input type="text" id="spot-name" class="form-control" placeholder="Spot name (e.g. Willow Creek Bench)" required style="flex: 2; min-width: 200px;">
+          <select id="spot-type" class="form-control" style="flex: 1; min-width: 140px;">
+            <option value="Quiet Bench">Quiet Bench</option>
+            <option value="Walking Loop">Walking Loop</option>
+            <option value="Birding View">Birding View</option>
+            <option value="Stargazing Hill">Stargazing Hill</option>
+            <option value="Shaded Grove">Shaded Grove</option>
+          </select>
+          <input type="text" id="spot-notes" class="form-control" placeholder="Notes (e.g. Best at sunrise)" style="flex: 2; min-width: 180px;">
+          <button type="submit" class="btn btn-primary">Add Spot</button>
+        </form>
+
+        <div id="user-spots-list">
+          <!-- Populated by app.js -->
+        </div>
+      </div>
+
+      <!-- Curated Ideas Grid -->
+      <div style="display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap;">
+        <span style="font-size: 0.88rem; font-weight: 600; color: var(--color-text-main);">Filter Environment:</span>
+        <select id="discovery-env-filter" class="form-control" style="width: auto;">
+          <option value="all">All Environments</option>
+          <option value="park">Public Park</option>
+          <option value="forest">Forest</option>
+          <option value="garden">Garden</option>
+          <option value="beach">Beach</option>
+          <option value="countryside">Countryside</option>
+          <option value="indoor nature">Indoor Nature</option>
+        </select>
+      </div>
+
+      <div id="discovery-grid" class="discovery-grid">
+        <!-- Populated by app.js -->
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Section 6: About, Touch Grass & Open-Source AI Setup
+         ===================================================================== -->
+    <section id="section-about" class="tab-section">
+      <div class="form-card">
+        <h2 style="font-family: var(--font-serif); color: var(--color-forest); font-size: 1.8rem; margin-bottom: 8px;">
+          🌱 About TrailBuddy Offline &amp; Hacktoberfest 2026
+        </h2>
+        <p style="color: var(--color-text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 20px;">
+          <strong>TrailBuddy Offline</strong> was built for <strong>Hacktoberfest 2026 Week 1 Challenge: “Touch Grass”</strong>.
+          The average modern adult spends over 7 hours every day looking at illuminated digital screens.
+          The Touch Grass challenge invites open-source developers to build software whose ultimate success metric
+          is people <em>closing the app</em> and engaging with the physical natural world.
+        </p>
+
+        <h3 class="plan-section-title">🏗️ Architecture &amp; Privacy Design</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin: 16px 0;">
+          <div class="highlight-box">
+            <strong>📴 Offline-First PWA:</strong>
+            Full Service Worker caching with Web App Manifest. Once loaded, the core app shell, rule-based planner,
+            challenges, and nature journal work seamlessly in dead zones with zero cell signal.
+          </div>
+          <div class="highlight-box" style="background-color: var(--color-earth-pale); border-color: var(--color-earth);">
+            <strong>🔒 Zero-Cloud Nature Journal:</strong>
+            Your observations and thoughts belong to you. Entries are stored strictly in browser storage
+            with one-click JSON backup and restore. Zero tracking or cloud harvesting.
+          </div>
+          <div class="highlight-box" style="background-color: #f0fdf4; border-color: var(--color-moss);">
+            <strong>🤖 Open-Weight AI Integration:</strong>
+            Powered by local Ollama (Mistral / Llama) or hosted open-source inference endpoints.
+            Always falls back smoothly to deterministic rule-based planning if models are unavailable.
+          </div>
+        </div>
+
+        <h3 class="plan-section-title">⚙️ Running Open-Source AI Locally (Ollama)</h3>
+        <p style="font-size: 0.92rem; color: var(--color-text-main); margin-bottom: 12px;">
+          TrailBuddy supports genuine local AI inference without paid third-party APIs. To run an open-weight model locally on Windows, macOS, or Linux:
+        </p>
+        <pre style="background: var(--color-forest-dark); color: #74c69d; padding: 16px; border-radius: var(--radius-sm); font-size: 0.85rem; overflow-x: auto; margin-bottom: 16px;">
+# 1. Install Ollama from https://ollama.com
+# 2. Pull an efficient open-weight model:
+ollama pull mistral
+# or a compact model:
+ollama pull llama3.2
+
+# 3. Ensure Ollama is running (defaults to http://localhost:11434)
+# 4. TrailBuddy will automatically detect it and generate AI plans!</pre>
+
+        <h3 class="plan-section-title">☁️ Render Deployment &amp; Cloud Inference</h3>
+        <p style="font-size: 0.92rem; color: var(--color-text-main); margin-bottom: 16px;">
+          On public Render Web Service deployments, running large language models in-memory exceeds free container RAM limits (512MB).
+          TrailBuddy gracefully handles this by:
+        </p>
+        <ul style="margin-left: 20px; font-size: 0.9rem; line-height: 1.6; color: var(--color-text-muted);">
+          <li>Defaulting to the high-performance <strong>Rule-Based Engine</strong> on Render when AI variables are not configured.</li>
+          <li>Supporting external open-weight endpoints via <code style="background: var(--color-cream); padding: 2px 6px;">HOSTED_AI_ENDPOINT</code> (e.g. HuggingFace TGI or vLLM server).</li>
+          <li>Transparently reporting active generation source on every plan.</li>
+        </ul>
+
+        <div style="margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--color-border); font-size: 0.85rem; color: var(--color-text-muted);">
+          TrailBuddy is distributed under the <strong>MIT License</strong>. Made with 💚 for Hacktoberfest 2026.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Challenge Details Modal -->
+  <div id="challenge-modal" class="modal-backdrop">
+    <div class="modal-dialog">
+      <button id="btn-close-modal" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <div id="challenge-modal-body"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div>
+        <strong>TrailBuddy Offline</strong> • Open Source AI Outdoor Companion
+        <div style="font-size: 0.78rem; opacity: 0.8; margin-top: 4px;">
+          Hacktoberfest 2026 Week 1 Challenge: Touch Grass • MIT License
+        </div>
+      </div>
+      <div class="footer-links">
+        <a href="#dashboard" data-tab-target="dashboard">Dashboard</a>
+        <a href="#planner" data-tab-target="planner">Planner</a>
+        <a href="#journal" data-tab-target="journal">Journal</a>
+        <a href="#about" data-tab-target="about">Architecture</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="/static/js/offline.js"></script>
+  <script src="/static/js/journal.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

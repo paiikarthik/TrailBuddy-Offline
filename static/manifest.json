@@ -1,0 +1,55 @@
+{
+  "name": "TrailBuddy Offline — AI Outdoor Companion",
+  "short_name": "TrailBuddy",
+  "description": "Less scrolling. More exploring. An open-source, privacy-first outdoor activity planner and nature journal for Hacktoberfest 2026 Touch Grass.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f5ee",
+  "theme_color": "#1b4332",
+  "orientation": "portrait-primary",
+  "categories": ["lifestyle", "outdoors", "health", "mindfulness"],
+  "icons": [
+    {
+      "src": "/static/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Plan Adventure",
+      "short_name": "Plan",
+      "description": "Generate a personalized outdoor itinerary",
+      "url": "/#planner",
+      "icons": [{ "src": "/static/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Nature Journal",
+      "short_name": "Journal",
+      "description": "Open your private offline nature observations",
+      "url": "/#journal",
+      "icons": [{ "src": "/static/icons/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Daily Challenge",
+      "short_name": "Challenge",
+      "description": "View today's Touch Grass outdoor challenge",
+      "url": "/#challenges",
+      "icons": [{ "src": "/static/icons/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
