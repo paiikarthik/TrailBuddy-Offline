@@ -85,7 +85,7 @@ title: Touch Grass with TrailBuddy Offline: Building a Privacy-First AI Outdoor 
 published: true
 tags: hacktoberfest, touchgrass, ai, pwa
 cover_image: https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1200&q=80
-canonical_url: https://dev.to/yourhandle/touch-grass-trailbuddy-offline
+canonical_url: https://dev.to/paiikarthik/touch-grass-trailbuddy-offline
 ai_disclosure_level: some_ai
 ---
 

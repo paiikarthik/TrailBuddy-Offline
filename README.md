@@ -191,8 +191,8 @@ TrailBuddy treats open-source AI as a genuine, functional capability while respe
 
 ```powershell
 # 1. Clone repository
-git clone https://github.com/your-username/trailbuddy-offline.git
-cd trailbuddy-offline
+git clone https://github.com/paiikarthik/TrailBuddy-Offline.git
+cd TrailBuddy-Offline
 
 # 2. Create and activate a virtual environment
 python -m venv .venv
